@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>deputado renato machado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          line-height: 1.6;
+          color: #fcfcfc;
+      }
+
+      /* Header */
+      header {
+          background: linear-gradient(135deg, #ff2508 0%, hsl(0, 0%, 8%) 100%);
+          color: rgb(245, 236, 236);
+          padding: 1rem 0;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 1000;
+          box-shadow: 0 2px 10px rgb(240, 237, 237);
+      }
+
+      nav {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 2rem;
+      }
+
+      .logo {
+          font-size: 1.5rem;
+          font-weight: bold;
+      }
+
+      .nav-links {
+          display: flex;
+          list-style: none;
+          gap: 2rem;
+      }
+
+      .nav-links a {
+          color: white;
+          text-decoration: none;
+          transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+          color: #1f1a02;
+      }
+
+      /* Hero Section */
+      .hero {
+          background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(IMAGENS/renato.jpg) no-repeat;
+          background-size: cover;
+          background-position: center;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: rgb(247, 243, 243);
+          margin-top: 70px;
+      }
+
+      .hero-content h1 {
+          font-size: 3.5rem;
+          margin-bottom: 1rem;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      }
+
+      .hero-content .numero {
+          background: lab(98.64% -0.01 1.06);
+          color: #131010;
+          padding: 1rem 2rem;
+          border-radius: 50px;
+          font-size: 2rem;
+          font-weight: bold;
+          display: inline-block;
+          margin: 1rem 0;
+          box-shadow: 0 5px 15px rgba(255, 0, 0, 0.438);
+      }
+
+      /* Container */
+      .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 2rem;
+      }
+
+      /* Seções */
+      section {
+          padding: 5rem 0;
+      }
+
+      .section-title {
+          text-align: center;
+          font-size: 2.5rem;
+          margin-bottom: 3rem;
+          color: #000000;
+      }
+
+      /* Sobre */
+      .sobre {
+          background: #0113135b;
+      }
+
+      .sobre-content {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          gap: 3rem;
+          align-items: center;
+      }
+
+      .foto-perfil {
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          object-fit: cover;
+          box-shadow: 0 10px 30px rgba(255, 0, 0, 0.986);
+          border: 5px solid #ff00003a;
+      }
+
+      .sobre-texto {
+          font-size: 1.2rem;
+          line-height: 1.8;
+      }
+
+      /* Missão Visão Valores */
+      .mv-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+          margin-top: 3rem;
+      }
+
+      .card {
+          background: rgb(24, 2, 2);
+          padding: 2rem;
+          border-radius: 15px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+          text-align: center;
+          transition: transform 0.3s, box-shadow 0.3s;
+          border-top: 5px solid #ff4800;
+      }
+
+      .card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      }
+
+      .card i {
+          font-size: 3rem;
+          color: #b91515;
+          margin-bottom: 1rem;
+      }
+
+      .card h3 {
+          color: #f8f8f8;
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+      }
+
+      /* Contato */
+.Contato {
+          background: linear-gradient(135deg, #f30909 0%, #000000 100%);
+          color: rgb(255, 251, 251);
+          text-align: center;
+        }
+
+      .Contato-links {
+          display: flex;
+          justify-content: center;
+          gap: 2rem;
+          margin-top: 2rem;
+          flex-wrap: wrap;
+      }
+
+      .Contato-links a {
+          color: rgb(240, 234, 234);
+          font-size: 1.5rem;
+          transition: transform 0.3s;
+      }
+
+      .Contato-links a:hover {
+          transform: scale(1.2);
+          color: #ff0800;
+      }
+
+      /* Footer */
+      footer {
+          background: #110000;
+          color: white;
+          text-align: center;
+          padding: 2rem;
+      }
+
+      /* Responsivo */
+      @media (max-width: 768px) {
+          .nav-links {
+              display: none;
+          }
+
+          .hero-content h1 {
+              font-size: 2.5rem;
+          }
+
+          .sobre-content {
+              grid-template-columns: 1fr;
+              text-align: center;
+          }
+
+          .foto-perfil {
+              width: 250px;
+              height: 250px;
+          }
+      }
+
+      /* Botão voltar ao topo */
+      .scroll-top {
+          position: fixed;
+          bottom: 30px;
+          right: 30px;
+          background: #0c0a00;
+          color: #f11304;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          font-size: 1.5rem;
+          box-shadow: 0 5px 15px #ff0000;
+          transition: all 0.3s;
+          z-index: 1000;
+          display: none;
+      }
+
+      .scroll-top:hover {
+          transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">RENATO MACHADO</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#missao">Missão</a></li>
+          <li><a href="#Contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Deputado Renato Marchado</h1>
+        <div class="numero">63.803 VOTOS</div>
+        <p>DEPUTADO 2023</p>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="sobre">
+      <div class="container">
+        <h2 class="section-title">SOBRE O DEPUTADO</h2>
+        <div class="sobre-content"><img src="IMAGENS/fotoperfil.jpg" alt="Renato Machado" class="foto-perfil" />
+          <div class="sobre-texto">
+            <p>
+              Renato Machado foi eleito com 63.803 votos para assumir seu
+              primeiro mandato como deputado estadual na Assembleia Legislativa
+              do Estado do Rio de Janeiro pelo Partido dos Trabalhadores (PT).
+              Filho da Dona Irene e do Sr. Jessé, nascido e criado em Bambuí,
+              Renato foi o primeiro maricaense a assumir uma vaga no Parlamento,
+              como o mais votado da cidade. Renato caminha lado a lado com
+              Fabiano Horta há quase 20 anos, sendo peça fundamental na
+              revolução implementada em seu município, que é referência em
+              políticas públicas exitosas para todo o Brasil. Iniciou sua
+              trajetória política como Chefe de Gabinete de Fabiano quando, à
+              época, era vereador de Maricá. Habilidoso na condução dos
+              trabalhos, Renato assumiu a Direção-Geral da Câmara logo em
+              seguida. Na ocasião em que Fabiano Horta foi eleito para ocupar
+              uma vaga de deputado federal no Congresso, Renato acompanhou-o,
+              também, como Chefe de Gabinete. Tão breve, por ser pastor
+              evangélico formado em Teologia, Renato foi convidado para assumir
+              a secretaria de Assuntos Religiosos da Prefeitura de Maricá,
+              norteando os trabalhos de forma ecumênica. Em 2016, Fabiano Horta
+              é eleito prefeito da cidade pela primeira vez e leva Renato
+              Machado para ser seu Secretário de Governo. Mas sua principal
+              marca estaria por vir, quando convocado para assumir a Secretaria
+              de Obras do município que, anos depois, fora transformada na
+              SOMAR, atual Autarquia de Obras.
+            </p>
+            <br />
+            <p>
+              Através da presidência da SOMAR, pôde transformar a vida de muitos
+              trabalhadores diretos e a cara da cidade em que cresceu. Dedicado
+              a melhorar a vida do povo, Renato implementou uma série de
+              sistemas que garantem drenagem, além de pavimentação de ruas e
+              urbanização nos 4 distritos. Além disso, sua gestão garantiu
+              melhorias na infraestrutura de serviços essenciais para
+              atendimento da população maricaense, como unidades de saúde,
+              escolas, praças e rodovias. Renato Machado é casado, pai de 3
+              filhos, tem MBA em Gestão Pública e em Meio Ambiente. Na Alerj,
+              assumiu a presidência da Comissão de Assuntos Municipais e de
+              Desenvolvimento Regional, é membro da Comissão de Minas e Energia,
+              da Comissão de Saneamento Ambiental e da Comissão de Obras
+              Públicas. Através da atuação parlamentar, pretende focar em
+              políticas públicas para promover a geração de emprego e renda,
+              fomentar saneamento básico, investir em infraestrutura, além de
+              combater a desigualdade socia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Missão, Visão e Valores -->
+    <section id="missao">
+      <div class="container">
+        <h2 class="section-title">Nossa Proposta</h2>
+        <div class="mv-grid">
+          <div class="card">
+            <i class="fas fa-bullseye"></i>
+            <h3>Missão</h3>
+            <p>
+              Trabalhar incansavelmente para transformar nossa cidade em um
+              lugar mais justo, seguro e próspero para todos os cidadãos,
+              priorizando as necessidades reais da população.
+            </p>
+          </div>
+          <div class="card">
+            <i class="fas fa-eye"></i>
+            <h3>Visão</h3>
+            <p>
+              Uma cidade onde todos tenham acesso a educação de qualidade, saúde
+              eficiente, segurança pública e oportunidades iguais de
+              desenvolvimento pessoal e profissional.
+            </p>
+          </div>
+          <div class="card">
+            <i class="fas fa-heart"></i>
+            <h3>Valores</h3>
+            <p>
+              Transparência, Honestidade, Compromisso, Respeito,
+              Responsabilidade e Trabalho em equipe para o bem comum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="Contato" class="Contato">
+      <div class="container">
+        <h2 class="section-title" style="color: white">Junte-se a nós!</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem">
+          VISITE NOSSAS PAGINAS!
+        </p>
+        <div class="Contato-links">
+          <a href="https://www.instagram.com/dep.renatomachado?igsh=MWFnOG9ybWpjNDU1NQ%3D%3D" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.facebook.com/share/17JZWJF4CP/?mibextid=wwXIfr" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; 2023 Renato Machado - Deputado. Todos os direitos reservados.
+      </p>
+    </footer>
+
+    <!-- Scroll Top -->
+    <div class="scroll-top" id="scrollTop">
+      <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script>
+      // Smooth scroll para links de navegação
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Scroll top button
+      const scrollTopBtn = document.getElementById("scrollTop");
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          scrollTopBtn.style.display = "flex";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+      });
+
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Animação dos cards
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".card").forEach((card) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(30px)";
+        card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+        observer.observe(card);
+      });
+    </script>
+  </body>
+</html>
